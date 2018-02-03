@@ -1,0 +1,255 @@
+@charset "utf-8"
+@import "helpers/_reset.scss"
+@import "helpers/_respond.scss"
+@import "helpers/_mixin"
+
+$white: #FFFFFF
+$black: #000000
+
+*
+  outline: none
+button
+  font: inherit
+img
+  max-width: 100%
+  max-height: 100%
+.hidden
+  display: none
+.bg-lightgrey
+  background-color: #dcdcdc
+.bg-grey
+  background-color: #777777
+
+body
+  font-family: 'Arial'
+  background-color: #fff
+  font-weight: normal
+  font-style: normal
+  color: #000
+  background-color: $white
+  padding: 0 !important
+  font-size: 14px
+  line-height: 22px
+
+.wr
+  width: 100%
+  background-repeat: no-repeat
+  background-position: center top
+  background-size: cover
+  z-index: 99
+  margin: 0 auto
+  position: relative
+  max-width: 1024px
+  min-width: 320px
+.block
+  width: 100%
+  position: relative
+  margin: 0 auto
+  +breakpoint(large)
+    max-width: 960px
+    margin-left: 24px
+    margin-right: 24px
+  +breakpoint(large-down)
+    padding-left: 10px
+    padding-right: 10px
+
+.wr-all
+  min-height: 100vh
+  width: 100%
+  +flex-column-between
+
+.header
+  &__block
+    padding-top: 25px
+    padding-bottom: 25px
+    position: relative
+    +breakpoint(medium-up)
+      +flex-start
+    +breakpoint(small)
+      +flex-center-between
+  &__inner
+    background-color: #777777
+    +breakpoint(medium-up)
+      &:not(:first-child)
+        margin-left: 20px
+    &-text
+      +breakpoint(large)
+        width: 280px
+      +breakpoint(medium)
+        width: calc(100% / 2 - 82.5px)
+      +breakpoint(small)
+        display: none
+  &__logo
+    width: 125px
+  &__info-block
+    color: $white
+    padding: 20px
+    text-align: right
+    +breakpoint(large)
+      width: 515px
+    +breakpoint(medium)
+      width: calc(100% / 2 - 82.5px)
+    +breakpoint(small)
+      background-color: #777777
+      &:hover
+        position: absolute
+        left: 10px
+        top: 20px
+        right: 10px
+        bottom: 0px
+      &:not(:hover)
+        width: 30px
+        height: 30px
+        & *
+          display: none
+    a, a:hover
+      text-decoration: underline
+.content
+  &__block
+    padding-top: 25px
+    padding-bottom: 25px
+    border-top: 1px solid #696969
+    display: flex
+  &-left
+    +breakpoint(large)
+      width: 185px
+      margin-right: 20px
+      +flex-column-between
+      &__menu
+        padding: 15px
+        color: $white
+        .active
+          font-weight: bold
+      &__bottom
+        min-height: 135px
+        margin-top: 20px
+    +breakpoint(large-down)
+      display: none
+  &-center
+    +breakpoint(large)
+      width: 755px
+    +breakpoint(large-down)
+      width: 100%
+    &__top
+      padding: 20px
+      &-p
+        display: block
+        &:not(:first-child)
+          margin-top: 30px
+      &-list
+        display: block
+        +breakpoint(small)
+          margin-top: 30px
+        +breakpoint(medium-up)
+          margin: 30px 30px 0
+        &-item
+          padding-left: 9px
+          position: relative
+          &::before
+            +psevdo
+            width: 3px
+            height: 3px
+            background-color: #777777
+            top: 9.5px
+            left: 0px
+    &__images
+      +flex-center-center
+      &-list
+        padding-top: 10px
+        margin-left: -10px
+        margin-right: -10px
+        +flex-between
+        &::after
+          content: ""
+          flex: auto
+        &-item
+          padding: 10px
+          @media screen and (max-width: 499px)
+            width: 25%
+          @media screen and (min-width: 500px)
+            width: 20%
+          img
+            width: 100%
+            height: auto
+    &__bottom
+      +breakpoint(medium-up)
+        display: flex
+        &:not(:first-child)
+          margin-top: 20px
+      &-box
+        padding: 20px
+        color: #777777
+        +breakpoint(large)
+          width: 370px
+        +breakpoint(small)
+          margin-top: 20px
+        +breakpoint(medium-up)
+          flex: 1
+          &:last-child:not(:first-child)
+            margin-left: 30px
+
+.footer
+  &__block
+    padding-top: 25px
+    padding-bottom: 25px
+    border-top: 1px solid #696969
+    +breakpoint(medium-up)
+      display: flex
+  &-left
+    flex: 1
+    color: $white
+    background-color: #777777
+    display: flex
+    padding: 15px 0px
+    +breakpoint(small)
+      width: 100%
+    &__list
+      &-item
+        padding: 0px 25px
+  &-center
+    +breakpoint(large)
+      flex: 1
+      margin-left: 30px
+      background-color: #777777
+      padding: 15px 25px
+      color: $white
+      &__list
+        &-item
+          padding-left: 10px
+          position: relative
+          &::before
+            +psevdo
+            width: 5px
+            height: 5px
+            background-color: $white
+            top: 9.5px
+            left: 0px
+    +breakpoint(large-down)
+      display: none
+  &-right
+    flex: 1
+    +flex-column-between
+    +breakpoint(medium-up)
+      &:not(:first-child)
+        margin-left: 30px
+    +breakpoint(small)
+      width: 100%
+    &__top, &__bottom
+      min-height: 75px
+      background-color: #777777
+      +breakpoint(small)
+        margin-top: 25px
+    &__bottom
+      +breakpoint(medium-up)
+        margin-top: 25px
+
+
+
+
+
+
+
+
+
+
+

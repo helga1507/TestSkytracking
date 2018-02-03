@@ -1,0 +1,103 @@
+extends ../_template
+
+block variables
+  - var title = 'Test Skytracking'
+
+
+
+block content
+  .wr-all
+    header.wr.header
+      .block.header__block
+        .header__inner.header__logo
+          img(src="assets/img/logo.jpg",alt="logo", title="logo",width="122", height="108")
+        .header__inner.header__inner-text
+        .header__inner.header__info-block
+          p +7 (499) 346-21-31
+          p
+            a(href="#") manager@pixelplus.ru
+          p
+            a(href="#") www.pixelplus.ru
+    .wr.content
+      .block.content__block
+        .content-left
+          .content-left__menu.bg-grey
+            ul.content-left__list
+              li.content-left__list-item.active
+                a(href="#") Создание сайтов
+              li.content-left__list-item
+                a(href="#") Изготовление сайтов «под ключ»
+              li.content-left__list-item
+                a(href="#") Как мы работаем
+              li.content-left__list-item
+                a(href="#") Интеграция с 1С
+              li.content-left__list-item
+                a(href="#") Поддержка сайтов
+              li.content-left__list-item
+                a(href="#") Создание сайтов на Битрикс
+              li.content-left__list-item
+                a(href="#") Модули Битрикс
+              li.content-left__list-item
+                a(href="#") Купить Битрикс
+              li.content-left__list-item
+                a(href="#") Дизайн сайтов
+              li.content-left__list-item
+                a(href="#") Редизайн сайтов
+              li.content-left__list-item
+                a(href="#") Интернет-магазины
+              li.content-left__list-item
+                a(href="#") Создание логотипов
+          .content-left__bottom.bg-grey
+        .content-center
+          .content-center__top.bg-lightgrey
+            p.content-center__top-p
+              b PSD файл с макетом. Макет разбит по слоям и сгрупированн по папкам:
+            ul.content-center__top-list
+              li.content-center__top-list-item
+                b number
+                | - нумерация блоков (номера блоков верстать не нужно)
+              li.content-center__top-list-item
+                b text
+                | - текстовые блоки (шрифт Arial, размер 14 пикселей, межстрочное растояние 22 пикселя)
+              li.content-center__top-list-item
+                b head
+                | - шапка сайта
+              li.content-center__top-list-item
+                b content
+                | - контентная область, которая в свою очередь делится на left  и center
+            p.content-center__top-p Текстовое описание задания и требования.
+          .content-center__images
+            ul.content-center__images-list
+              - for (var i=0; i<8; i++) {
+                li.content-center__images-list-item
+                  img(src="assets/img/content.jpg",alt="logo", title="logo",width="131", height="150")
+              - }
+          .content-center__bottom
+            .content-center__bottom-box.bg-lightgrey  Студия «Пиксель Плюс» разработает полнофункциональный продукт ориентированный на целевую аудиторию и эффективно решающий поставленные перед ним маркетинговые задачи. Опыт работ и использование собственных технологий, позволяет предлагать услугу изготовления сайта в Москве в разумные сроки.
+            .content-center__bottom-box.bg-lightgrey Поисковое продвижение (раскрутка) ведется по коммерческим запросам, что позволяет многократно увеличить количество продаж с сайта при разумном рекламном бюджете.
+    .wr.footer
+      .block.footer__block
+        .footer-left
+          - var n = 1
+          ul.footer-left__list
+            while n <= 7
+              li.footer-left__list-item Пункт #{n++}
+          ul.footer-left__list
+            while n <= 14
+              li.footer-left__list-item Пункт #{n++}
+        .footer-center
+          ul.footer-center__list
+            li.footer-center__list-item Поисковое продвижение сайтов
+            li.footer-center__list-item Тариф «Старт»
+            li.footer-center__list-item Тариф «Продвижение Плюс»
+            li.footer-center__list-item Тариф «Интернет-магазин»
+            li.footer-center__list-item Тариф «Эксклюзив»
+            li.footer-center__list-item Тариф «Контекст + SEO»
+            li.footer-center__list-item Тариф «Регион»
+        .footer-right
+          .footer-right__top
+          .footer-right__bottom
+
+
+
+
